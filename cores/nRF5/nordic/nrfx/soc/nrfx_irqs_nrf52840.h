@@ -1,6 +1,8 @@
 /*
- * Copyright (c) 2017 - 2020, Nordic Semiconductor ASA
+ * Copyright (c) 2017 - 2025, Nordic Semiconductor ASA
  * All rights reserved.
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -31,6 +33,8 @@
 
 #ifndef NRFX_IRQS_NRF52840_H__
 #define NRFX_IRQS_NRF52840_H__
+
+#include "drivers/nrfx_utils.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -78,7 +82,7 @@ extern "C" {
 #define nrfx_nfct_irq_handler       NFCT_IRQHandler
 
 // GPIOTE_IRQn
-#define nrfx_gpiote_irq_handler     GPIOTE_IRQHandler
+#define nrfx_gpiote_0_irq_handler   GPIOTE_IRQHandler
 
 // SAADC_IRQn
 #define nrfx_saadc_irq_handler      SAADC_IRQHandler
@@ -111,8 +115,8 @@ extern "C" {
 // RTC1_IRQn
 #define nrfx_rtc_1_irq_handler      RTC1_IRQHandler
 
-// QDEC_IRQn
-#define nrfx_qdec_irq_handler       QDEC_IRQHandler
+// QDEC0_IRQn
+#define nrfx_qdec_0_irq_handler     QDEC_IRQHandler
 
 // COMP_LPCOMP_IRQn
 #if NRFX_CHECK(NRFX_PRS_ENABLED) && NRFX_CHECK(NRFX_PRS_BOX_3_ENABLED)
@@ -150,7 +154,7 @@ extern "C" {
 #define nrfx_pwm_0_irq_handler      PWM0_IRQHandler
 
 // PDM_IRQn
-#define nrfx_pdm_irq_handler        PDM_IRQHandler
+#define nrfx_pdm_0_irq_handler      PDM_IRQHandler
 
 // MWU_IRQn
 
@@ -173,7 +177,7 @@ extern "C" {
 #define nrfx_rtc_2_irq_handler      RTC2_IRQHandler
 
 // I2S_IRQn
-#define nrfx_i2s_irq_handler        I2S_IRQHandler
+#define nrfx_i2s_0_irq_handler      I2S_IRQHandler
 
 // FPU_IRQn
 
